@@ -1,12 +1,15 @@
 name: postman test workflow
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-
+on: [repository_dispatch]
 jobs:
+  cypress-run:
+    runs-on: [self-hosted, F1]
+    steps:
+      - run: echo "Triggering Wokflow 2"
+      - name: Checkout
+        uses: actions/checkout@v2
+
+
   build:
     runs-on: [self-hosted, F1]
     steps:
