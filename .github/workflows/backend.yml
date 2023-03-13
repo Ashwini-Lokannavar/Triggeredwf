@@ -1,10 +1,15 @@
-name: Postman test workflows
+name: Postman test workflow
 
 on:
+  push:
+    branches:
+      - main
+ 
   workflow_call:
     secrets:
       token:
         required: true
+ 
 
 jobs:
   triage:
