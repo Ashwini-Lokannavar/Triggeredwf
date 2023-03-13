@@ -1,4 +1,4 @@
-name: postman test workflow
+name: Postman test workflow
 
 on:
   workflow_call:
