@@ -8,7 +8,7 @@ on:
 
 jobs:
   triage:
-    runs-on:  [self-hosted, F1]
+    runs-on:  [self-hosted, F2]
     steps:
     - uses: actions/labeler@v4
       with:
