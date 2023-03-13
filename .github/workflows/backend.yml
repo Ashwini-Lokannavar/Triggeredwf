@@ -1,13 +1,19 @@
 name: postman test workflow
 
-on: [repository_dispatch]
+on:
+  workflow_call:
+    secrets:
+      token:
+        required: true
+
 jobs:
-  cypress-run:
-    runs-on: [self-hosted, F1]
+  triage:
+    runs-on:  [self-hosted, F1]
     steps:
-      - run: echo "Triggering Wokflow 2"
-      - name: Checkout
-        uses: actions/checkout@v2
+    - uses: actions/labeler@v4
+      with:
+        repo-token: ${{ secrets.TEST_KEY }}
+        
 
 
   build:
