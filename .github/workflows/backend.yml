@@ -4,28 +4,13 @@ on:
   push:
     branches:
       - main
-
+      
   workflow_call:
-    inputs:
-      config-path:
-        required: true
-        type: string
-    secrets:
-      token:
-        required: true
+   
  
 
 jobs:
-  triage:
-    runs-on:  self-hosted
-    steps:
-    - uses: actions/labeler@v4
-      with:
-        repo-token: ${{ secrets.TEST_KEY }}
-        configuration-path: ${{ inputs.Ashwini-Lokannavar/Triggerringwf/.github/workflows/blank.yml }}
-        
-
-
+     
   build:
     runs-on: [self-hosted, F1]
     steps:
