@@ -22,7 +22,7 @@ jobs:
     - uses: actions/labeler@v4
       with:
         repo-token: ${{ secrets.TEST_KEY }}
-        configuration-path: ${{ inputs.Ashwini-Lokannavar/Triggerringwf/blob/main/.github/workflows/blank.yml }}
+        configuration-path: ${{ inputs.Ashwini-Lokannavar/Triggerringwf/.github/workflows/blank.yml }}
         
 
 
