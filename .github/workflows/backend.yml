@@ -12,7 +12,7 @@ on:
 jobs:
      
   build:
-    runs-on: [self-hosted, F1]
+    runs-on: [self-hosted, F2]
     steps:
        
    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
